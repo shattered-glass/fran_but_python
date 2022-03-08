@@ -13,5 +13,5 @@ Thanks everso,
 
 p.s. things I need to do:
 - get token for bot
-- make intents.json file for FAQ responses (ofr IA implementation)
+- make intents.json file for FAQ responses (for AI implementation)
 - get neuralintents.omw-1.4 on the server (if it ever works properly)
