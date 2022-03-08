@@ -9,4 +9,9 @@ Also, if we want AI implementation (basically, the bot can answer FAQs and inter
 on the server.
 
 Thanks everso,
-- Rigel
+-Rigel
+
+p.s. things I need to do:
+- get token for bot
+- make intents.json file for FAQ responses (ofr IA implementation)
+- get neuralintents.omw-1.4 on the server (if it ever works properly)
