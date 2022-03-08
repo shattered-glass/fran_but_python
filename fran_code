@@ -21,15 +21,19 @@ async def on_ready():
 @client.event
 async def on_message(message):
     global start_time
+    response_time = datetime.datetime.utcnow()
     if message.author == client.user:
         return
-
+    
+    # this is the one which utilises GenericAssistant, so it won't be applicable until later.
     # if message.content.startswith('qFran: '):
         # response = chatAI.request(message.content[7:])
         # await message.channel.send(response)
 
     if message.content == 'Fran Test':
+        now = datetime.datetime.utcnow()
         await message.channel.send('All systems nominal.')
+        await message.channel.send(now - response_time)
 
     if message.content == 'dmFran':
         await message.author.send("This is the start of a direct message conversation.")
