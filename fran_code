@@ -1,0 +1,45 @@
+# download neuralintents and [insert other things i forgot but will get around to looking up]
+import discord
+import random
+import datetime
+from neuralintents import GenericAssistant
+import nltk
+
+# Global variables
+client = discord.Client()
+start_time = datetime.datetime.utcnow()
+
+#ChatAI setup (not implemented yet)
+#chatAI = GenericAssistant('intents.json')
+#chatAI.train_model()
+#chatAI.save_model()
+
+@client.event
+async def on_ready():
+    print('Now logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+    global start_time
+    if message.author == client.user:
+        return
+
+    # if message.content.startswith('qFran: '):
+        # response = chatAI.request(message.content[7:])
+        # await message.channel.send(response)
+
+    if message.content == 'Fran Test':
+        await message.channel.send('All systems nominal.')
+
+    if message.content == 'dmFran':
+        await message.author.send("This is the start of a direct message conversation.")
+
+    if message.content == 'rNumber':
+        rnumber = random.randint(1, 101)
+        await message.channel.send(rnumber)
+
+    if message.content == 'programRuntime':
+        current_time = datetime.datetime.utcnow()
+        program_runtime = current_time - start_time
+        await message.channel.send("Fran has been active for: ")
+        await message.channel.send(program_runtime)
