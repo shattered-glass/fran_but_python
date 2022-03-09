@@ -1,4 +1,4 @@
-# download neuralintents and [insert other things i forgot but will get around to looking up]
+# download neuralintents and from nltk | corpora omw-1.4
 import discord
 import random
 import datetime
@@ -47,3 +47,4 @@ async def on_message(message):
         program_runtime = current_time - start_time
         await message.channel.send("Fran has been active for: ")
         await message.channel.send(program_runtime)
+
