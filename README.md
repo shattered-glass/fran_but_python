@@ -9,7 +9,7 @@ Also, if we want AI implementation (basically, the bot can answer FAQs and inter
 on the server.
 
 Thanks everso,
--Rigel
+- Evan
 
 p.s. things I need to do:
 - get token for bot
